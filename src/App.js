@@ -1,24 +1,51 @@
-import logo from './logo.svg';
+import React from 'react';
+import Fade from 'react-reveal';
+import Container from 'react-bootstrap/Container';
 import './App.css';
+import { Parallax } from "react-parallax";
+import Navbar from './components/navbar';
+import Caraousel from './components/caraousel';
+import Title from './components/Titlemessage';
+import About from './pages/about';
+import Skills from './pages/Skills';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    
+    <div id="home"><Navbar/>
+    <Caraousel/>
+     <Title/>    
+   <div>
+     
+   <Parallax
+          blur={{ min: -30, max: 30 }}
+          bgImage={require("./assets/img/parallex/background_reverse.webp")}
+          bgImageAlt="as"
+          strength={-200}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <Container className="container-box rounded">
+     <Fade duration={500}>
+        <About/>
+     </Fade>
+     </Container >
+     </Parallax>
+   </div>
+   
+     <Container className="container-box rounded">
+   
+     <Skills/>
+   
+     </Container >
+    
+     <Container className="container-box rounded">
+   
+   <Contact/>
+ 
+   </Container >
+   
+     </div>
+
   );
 }
 

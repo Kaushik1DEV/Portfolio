@@ -1,0 +1,41 @@
+.about {
+    background-color: transparent;
+    font-size: 1.1em;
+  }
+  
+  .profile {
+    max-width: 18em;
+    max-height: 30rem;  
+}
+  
+  .my-details {
+    background-color: rgba(255, 255, 255, 0.747);
+  }
+  .focus {
+    transition: transform 0.3s;
+  }
+  
+  .focus:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-title {
+    font-size: 2em;
+    font-weight: 700;
+  }
+  
+  .image-style {
+    width: 3em;
+  }
+  
+  .font-details {
+    font-size: 3em;
+    font-weight: 500;
+    color: #231d5af8;
+  }
+  
+  .font-details-b {
+    font-size: 3em;
+    font-weight: 500;
+    color: #ffffff;
+  }
